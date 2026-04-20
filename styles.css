@@ -525,3 +525,81 @@ footer {
     gap: 1rem;
   }
 }
+
+/* About Clinic Styles */
+.about-clinic {
+  background-color: var(--white);
+}
+
+.clinic-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.clinic-info-content h3 {
+  font-size: 1.75rem;
+  color: var(--primary-blue);
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+.clinic-info-content p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--primary-blue);
+  font-weight: 500;
+}
+
+.feature-item svg {
+  color: var(--secondary-blue);
+}
+
+.clinic-gallery .gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease;
+}
+
+.gallery-img.large {
+  grid-column: span 2;
+  height: 300px;
+}
+
+.gallery-img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .clinic-info-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
